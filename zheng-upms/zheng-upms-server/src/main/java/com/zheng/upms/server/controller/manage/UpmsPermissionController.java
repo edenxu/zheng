@@ -106,7 +106,7 @@ public class UpmsPermissionController extends BaseController {
     @RequestMapping(value = "/user/{id}", method = RequestMethod.POST)
     @ResponseBody
     public Object user(@PathVariable("id") int id, HttpServletRequest request) {
-        return upmsPermissionService.getTreeByUserId(id, NumberUtils.toByte(request.getParameter("type")));
+        return upmsPermissionService.getTreeByUserId(id, Byte.valueOf(request.getParameter("type")));
     }
 
     @ApiOperation(value = "新增权限")

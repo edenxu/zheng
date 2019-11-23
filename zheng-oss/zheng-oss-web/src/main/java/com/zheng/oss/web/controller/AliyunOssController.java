@@ -41,7 +41,7 @@ public class AliyunOssController {
 			return result;
 		}
 		MappingJacksonValue jsonp = new MappingJacksonValue(result);
-		jsonp.setJsonpFunction(callback);
+		// jsonp.setJsonpFunction(callback);
 		return jsonp;
 	}
 

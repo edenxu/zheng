@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.transaction.TransactionConfiguration;
 
 /**
  * 单元测试
@@ -18,7 +17,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
         "classpath:applicationContext.xml",
         "classpath:applicationContext-dubbo-consumer.xml"
 })
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
+//@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 public class UpmsServiceTest {
 
     @Autowired
